@@ -14,21 +14,21 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
-$("saveBtn").on("click", function() {
-  var text = $(this).siblings(".description").val();
-  var events = $(this).parents().attr("id");
-  localStorage.setItem(events, text);
-});
+  $(".saveBtn").on("click", function(){
+    var text = $(this).siblings(".description").val();
+    var events = $(this).parents().attr("id");
+    localStorage.setItem(events, text);
+  });
 
-$("#hour-9").children(".description").val(localStorage.getItem("hour-9"));
-$("#hour-10").children(".description").val(localStorage.getItem("hour-10"));
-$("#hour-11").children(".description").val(localStorage.getItem("hour-11"));
-$("#hour-12").children(".description").val(localStorage.getItem("hour-12"));
-$("#hour-13").children(".description").val(localStorage.getItem("hour-13"));
-$("#hour-14").children(".description").val(localStorage.getItem("hour-14"));
-$("#hour-15").children(".description").val(localStorage.getItem("hour-15"));
-$("#hour-16").children(".description").val(localStorage.getItem("hour-16"));
-$("#hour-17").children(".description").val(localStorage.getItem("hour-17"));
+  $("#hour-9").children(".description").val(localStorage.getItem("hour-9"));
+  $("#hour-10").children(".description").val(localStorage.getItem("hour-10"));
+  $("#hour-11").children(".description").val(localStorage.getItem("hour-11"));
+  $("#hour-12").children(".description").val(localStorage.getItem("hour-12"));
+  $("#hour-13").children(".description").val(localStorage.getItem("hour-13"));
+  $("#hour-14").children(".description").val(localStorage.getItem("hour-14"));
+  $("#hour-15").children(".description").val(localStorage.getItem("hour-15"));
+  $("#hour-16").children(".description").val(localStorage.getItem("hour-16"));
+  $("#hour-17").children(".description").val(localStorage.getItem("hour-17"));
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
@@ -42,21 +42,6 @@ $("#hour-17").children(".description").val(localStorage.getItem("hour-17"));
   // attribute of each time-block be used to do this?
   //
 
-  function readToDoFromStorage() {
-    var ToDo = localStorage.getitem('todo');
-    if (ToDo) {
-      ToDo = JSON.parse(ToDo);
-    } else {
-      ToDo = [];
-    }
-    return ToDo;
-  }
-
-  function saveToDoToStorage(ToDo) {
-    localStorage.setItem('todo', JSON.stringify(ToDo));
-  }
-
-  var ToDo = readToDoFromStorage();
 
   // TODO: Add code to display the current date in the header of the page.
   function displayTime() {
