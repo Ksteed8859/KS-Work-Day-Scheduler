@@ -1,4 +1,4 @@
-# Kate Steed Calender Website
+# Kate Steed Work Day Scheduler
 
 ## Description
 
